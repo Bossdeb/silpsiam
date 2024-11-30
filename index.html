@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศิลป์สยาม | Silpsiam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s ease-in-out;
+            border-radius: 8px;
+        }
+        .btn-primary {
+            background-color: #FFC107;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #FFD54F;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-yellow-500 shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-white">ศิลป์สยาม</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="nav-item px-4 py-2 text-white hover:text-yellow-100">หน้าหลัก</a></li>
+                <li><a href="#owner" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ประวัติของเจ้าของ</a></li>
+                <li><a href="#news" class="nav-item px-4 py-2 text-white hover:text-yellow-100">กิจกรรม</a></li>
+                <li><a href="#products" class="nav-item px-4 py-2 text-white hover:text-yellow-100">สินค้า</a></li>
+
+                <li><a href="#contact" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-yellow-500 text-white py-24 ">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold leading-tight mb-8">
+                <span id="typewriter" class="border-r-4 border-white"></span>
+            </h2>
+        
+            <!-- Slideshow -->
+            <div class="relative mx-auto" style="max-width: 800px;">
+                <!-- Slides -->
+                <div class="overflow-hidden relative w-full rounded-lg shadow-md" style="aspect-ratio: 16/9;">
+                    <div id="slides" class="flex transition-transform duration-500 w-full">
+                        <img src="src/silpsiam_slideshow1.jpg" alt="Artwork 1" class="w-full h-auto rounded-lg">
+                        <img src="src/silpsiam_slideshow2.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
+                        
+                    </div>
+                </div>
+        
+                <!-- Navigation Buttons -->
+                <div class="absolute inset-0 flex items-center justify-between">
+                    <button id="prev" class="text-white bg-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md">‹</button>
+                    <button id="next" class="text-white bg-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md">›</button>
+                </div>
+        
+                <!-- Indicators -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button class="indicator bg-yellow-600 w-4 h-4 rounded-full focus:outline-none"></button>
+                    <button class="indicator bg-yellow-400 w-4 h-4 rounded-full focus:outline-none"></button>
+              
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <section id="about" class="py-20 bg-yellow-100">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <!-- Image Section -->
+            <div class="lg:w-1/2 mb-8 lg:mb-0">
+                <img src="https://t1.blockdit.com/photos/2020/09/5f67eea497eed50cb45fc375_800x0xcover_CK_y5FYU.jpg" 
+                     alt="เกี่ยวกับเรา" 
+                     class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+    
+            <!-- Text Section -->
+            <div class="lg:w-1/2 lg:pl-10 text-center lg:text-left">
+                <h3 class="text-3xl font-bold text-gray-700 mb-6">เกี่ยวกับเรา</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง ตั้งอยู่ที่ 36 หมู่ 6 ต.เกาะเกร็ด อ.ปากเกร็ด จ.นนทบุรี 11120 ซึ่งอยู่
+ภายใต้ผลิตภัณฑ์ แบรนด์ “ศิลป์สยาม” เพื่อให้สถานที่เป็น แหล่งเรียนรู้งานศิลป์แผ่นดิน และสถานที่เผยแพร่ให้เป็นศูนย์กลางงานช่างศิลปะไทย ที่มีการทำกิจกรรมและพาเที่ยวนววิถีชุมชนคุณธรรมเกาะเกร็ด
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="history" class="py-20 bg-yellow-100">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">ประวัติความเป็นมา</h3>
+            <div class="flex flex-col lg:flex-row items-start lg:space-x-10">
+                <!-- Image Section -->
+                <div class="lg:w-1/3 mb-8 lg:mb-0">
+                    <img src="https://via.placeholder.com/400x300" alt="ภาพเก่า" class="rounded-lg shadow-md w-full">
+                </div>
+                <!-- Text Section -->
+                <div class="lg:w-2/3 text-gray-700">
+                    <p class="text-lg leading-relaxed mb-4">
+                        ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง เดิมใช้บ้านศิลป์สยามเป็นบ้านในหมู่ 1 แต่ได้ย้ายมาอยู่หมู่ 2
+                        บริเวณวัดเสาธงทอง ซึ่งมีอาคารเรียนที่ปล่อยร้างไว้ประมาณ 120 ปี เดิมเป็นอาคารเรียนอนุบาลชื่อ "โรงเรียนวัดเสาธงทอง" 
+                        แห่งแรกของอำเภอปากเกร็ด...
+                    </p>
+                    <p class="text-lg leading-relaxed mb-4">
+                        ครูฑามก์ สิปปสยาม ได้เข้ามาฟื้นฟูอาคารเรียนดังกล่าวให้กลับมามีชีวิตชีวาอีกครั้งในฐานะ “ศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ด” 
+                        เพื่อเป็นแหล่งเรียนรู้เกี่ยวกับงานช่างไทย โดยเฉพาะการสร้างสรรค์ “หัวโขน” ซึ่งเป็นส่วนหนึ่งของศิลปะไทย...
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        ด้วยความมุ่งมั่นและวิสัยทัศน์ที่ยิ่งใหญ่ ครูฑามก์ สิปปสยามได้รับรางวัลเกียรติยศ “วัฒนคุณาธร” 
+                        จากกระทรวงวัฒนธรรมเมื่อปี 2562 เพื่อยกย่องในความทุ่มเทในการส่งเสริมและอนุรักษ์ศิลปะไทยให้เป็นที่ประจักษ์...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="owner" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">ประวัติของเจ้าของ</h3>
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- รูปเจ้าของ -->
+                <div class="lg:w-1/3 mb-8 lg:mb-0">
+                    <img src="src/silpsiam_owner.jpg" alt="เจ้าของศิลป์สยาม" class="rounded-full shadow-lg w-80 h-80 mx-auto">
+                </div>
+                <!-- ข้อมูลเกี่ยวกับเจ้าของ -->
+                <div class="lg:w-2/3 lg:pl-10 text-center lg:text-left">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-6">ครูฑามก์ สิปปสยาม</h4>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        ครูฑามก์ สิปปสยาม ผู้ก่อตั้ง "ศิลป์สยาม" เป็นศิลปินผู้มีความหลงใหลในงานศิลปะไทยและวัฒนธรรมพื้นบ้าน 
+                        ด้วยประสบการณ์มากกว่า 20 ปีในงานช่างฝีมือ ครูฑามก์ได้รับการยอมรับอย่างสูงทั้งในประเทศและต่างประเทศ...
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        ความมุ่งมั่นของครูฑามก์คือการสืบสานและเผยแพร่ศิลปะไทยให้คนรุ่นใหม่ได้เรียนรู้ 
+                        โดยเฉพาะงานหัวโขนและงานช่างอื่น ๆ ที่เกี่ยวข้อง ซึ่งล้วนเป็นมรดกทางวัฒนธรรมที่ล้ำค่า...
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        ครูฑามก์ได้รับรางวัลมากมาย เช่น รางวัล “วัฒนคุณาธร” จากกระทรวงวัฒนธรรมในปี 2562 
+                        เพื่อยกย่องในความทุ่มเทและความมุ่งมั่นที่มีต่อศิลปะไทย...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">กิจกรรม</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ข่าวสารที่ 1 -->
+                <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden">
+                    <img src="src/silpsiam_workshop1.jpg" alt="ข่าวสาร 1" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">ปั่นจักรยานชิมอาหารมอญทำศิลปะไทย</h4>
+                        <p class="text-gray-600 mb-4">
+                            เนื้อหาข่าวสารที่ย่อให้กระชับและดึงดูดความสนใจของผู้อ่าน...
+                        </p>
+                        <a href="#" class="text-yellow-600 font-bold hover:underline">อ่านเพิ่มเติม →</a>
+
+                    </div>
+                </div>
+                <!-- ข่าวสารที่ 2 -->
+                <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden">
+                    <img src="src/silpsiam_workshop2.jpg" alt="ข่าวสาร 2" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">ล่องเรือชมทิวทัศน์วัฒนธรรม รศ.๑๓๒</h4>
+                        <p class="text-gray-600 mb-4">
+                            เนื้อหาข่าวสารที่ย่อให้กระชับและดึงดูดความสนใจของผู้อ่าน...
+                        </p>
+                        <a href="#" class="text-yellow-600 font-bold hover:underline">อ่านเพิ่มเติม →</a>
+                    </div>
+                </div>
+                <!-- ข่าวสารที่ 3 -->
+                <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/400x250" alt="ข่าวสาร 3" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">หัวข้อข่าวสาร 3</h4>
+                        <p class="text-gray-600 mb-4">
+                            เนื้อหาข่าวสารที่ย่อให้กระชับและดึงดูดความสนใจของผู้อ่าน...
+                        </p>
+                        <a href="#" class="text-yellow-600 font-bold hover:underline">อ่านเพิ่มเติม →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="py-20 bg-yellow-50">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">สินค้า</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- สินค้า 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="src/LINE_ALBUM_ผ้าหมักดินเกร็ดพิมพ์เขียนลายไทย_241130_12.jpg" alt="สินค้า 1" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">ผ้าหมักดินเกร็ดพิมพ์เขียนลายไทย</h4>
+                        <p class="text-gray-600 mb-4">รายละเอียดสินค้าสั้น ๆ ที่บรรยายถึงจุดเด่น...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-bold text-lg">฿299</span>
+                            <a href="product1.html" class="btn-primary">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- สินค้า 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="src/product2_1.jpg" alt="สินค้า 2" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">แผ่นกระดาษเกร็ดชวา</h4>
+                        <p class="text-gray-600 mb-4">รายละเอียดสินค้าสั้น ๆ ที่บรรยายถึงจุดเด่น...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-bold text-lg">฿1,200</span>
+                            <a href="product2.html" class="btn-primary">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- สินค้า 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/400x250" alt="สินค้า 3" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">เครื่องปั้นดินเผา</h4>
+                        <p class="text-gray-600 mb-4">รายละเอียดสินค้าสั้น ๆ ที่บรรยายถึงจุดเด่น...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-bold text-lg">฿499</span>
+                            <a href="#" class="btn-primary">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Contact Section -->
+     <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">ติดต่อเรา</h3>
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2 lg:pr-8">
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700">ชื่อ</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700">อีเมล</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700">ข้อความ</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">ส่งข้อความ</button>
+                    </form>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.358024953994!2d100.48632151536637!3d13.847860390287453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e283fa1a52fcd5%3A0xfca9c5d7dbe47214!2z4LmA4LiB4Liy4LiZ4LiB4Lib4LiZ4Liq4Liy4LiB4LiU4LmA4LinIOC4reC4oOC5gOC4quC4nuC4o-C4tOC5jOC4l-C4sA!5e0!3m2!1sth!2sth!4v1675257600000!5m2!1sth!2sth" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Footer -->
+    <footer class="bg-yellow-500 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 ศิลป์สยาม. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const slides = document.getElementById("slides");
+        const indicators = document.querySelectorAll(".indicator");
+        let currentSlide = 0;
+    
+        const updateSlide = (index) => {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle("bg-yellow-600", i === index);
+                indicator.classList.toggle("bg-yellow-400", i !== index);
+            });
+        };
+    
+        document.getElementById("prev").addEventListener("click", () => {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : indicators.length - 1;
+            updateSlide(currentSlide);
+        });
+    
+        document.getElementById("next").addEventListener("click", () => {
+            currentSlide = (currentSlide < indicators.length - 1) ? currentSlide + 1 : 0;
+            updateSlide(currentSlide);
+        });
+    
+        indicators.forEach((indicator, i) => {
+            indicator.addEventListener("click", () => {
+                currentSlide = i;
+                updateSlide(currentSlide);
+            });
+        });
+    
+        // Auto-Sliding Feature
+        setInterval(() => {
+            currentSlide = (currentSlide < indicators.length - 1) ? currentSlide + 1 : 0;
+            updateSlide(currentSlide);
+        }, 5000); // Change slide every 5 seconds
+        document.addEventListener("DOMContentLoaded", () => {
+    const text = "ยินดีต้อนรับสู่ศิลป์สยาม"; // ข้อความที่ต้องการพิมพ์
+    const typewriterElement = document.getElementById("typewriter");
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            typewriterElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 100); // ระยะเวลาการพิมพ์ (ปรับได้)
+        } else {
+            setTimeout(() => {
+                typewriterElement.textContent = ""; // รีเซ็ตข้อความ
+                index = 0; // เริ่มพิมพ์ใหม่
+                typeEffect(); // พิมพ์ใหม่อีกครั้ง
+            }, 3000); // เวลาที่ข้อความจะแสดงก่อนรีเซ็ต
+        }
+    }
+
+    typeEffect();
+});
+    </script>
+</body>
+</html>
+
+
