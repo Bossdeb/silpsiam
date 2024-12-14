@@ -9,30 +9,48 @@
     <style>
         body {
             font-family: 'Kanit', sans-serif;
+            background: url('src/thai-pattern-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
-        .hidden {
-    display: none;
-}
     
         .nav-item:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 223, 136, 0.2);
             transition: background-color 0.3s ease-in-out;
             border-radius: 8px;
         }
+    
         .btn-primary {
-            background-color: #FFC107;
-            color: #fff;
+            background-color: #FFD700;
+            color: black;
             padding: 10px 20px;
             border-radius: 8px;
             font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+    
         .btn-primary:hover {
-            background-color: #FFD54F;
-            color: #333;
+            background-color: #FFC107;
+            color: #000;
+        }
+    
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    
+        .decorative-border {
+            border: 3px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
         }
     </style>
+    
 </head>
 <body class="bg-yellow-50 text-gray-800">
 
@@ -65,9 +83,9 @@
     </nav>
     
 
-    <header class="bg-yellow-500 text-white py-24 ">
+    <header class="bg-yellow-50 text-white py-24 ">
         <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-extrabold leading-tight mb-8">
+            <h2 class="text-5xl font-extrabold leading-tight mb-8 text-black">
                 <span id="typewriter" class="border-r-4 border-white"></span>
             </h2>
         
@@ -98,56 +116,78 @@
         </div>
     </header>
     
-    <section id="about" class="bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto bg-white p-6 ">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">เกี่ยวกับศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง</h2>
-          <p class="text-gray-700 leading-relaxed">
-            ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง ตั้งอยู่ที่ 36 หมู่ 6 ต.เกาะเกร็ด อ.ปากเกร็ด จ.นนทบุรี 11120 ซึ่งอยู่ภายใต้ผลิตภัณฑ์ แบรนด์ “ศิลป์สยาม” เพื่อให้สถานที่เป็นแหล่งเรียนรู้งานศิลป์แผ่นดิน และสถานที่เผยแพร่ให้เป็นศูนย์กลางงานช่างศิลปะไทย ที่มีการทำกิจกรรมและพาเที่ยวนววิถีชุมชนคุณธรรมเกาะเกร็ด
-          </p>
+    <section id="about" class="bg-yellow-50 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto  rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center p-6">
+            <!-- ภาพด้านซ้าย -->
+            <div class="flex-shrink-0 md:w-1/3">
+                <img src="src/silpsiam_slideshow1.jpg" alt="เกี่ยวกับศิลป์สยาม" class="w-full h-auto rounded-lg">
+            </div>
+            <!-- ข้อความด้านขวา -->
+            <div class="mt-6 md:mt-0 md:ml-6 md:w-2/3">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center md:text-left">เกี่ยวกับศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง ตั้งอยู่ที่ 36 หมู่ 6 ต.เกาะเกร็ด อ.ปากเกร็ด จ.นนทบุรี 11120 
+                    ซึ่งอยู่ภายใต้ผลิตภัณฑ์ แบรนด์ “ศิลป์สยาม” เพื่อให้สถานที่เป็นแหล่งเรียนรู้งานศิลป์แผ่นดิน และสถานที่เผยแพร่ให้เป็นศูนย์กลางงานช่างศิลปะไทย 
+                    ที่มีการทำกิจกรรมและพาเที่ยวนววิถีชุมชนคุณธรรมเกาะเกร็ด
+                </p>
+            </div>
         </div>
-      </section>
+    </section>
   
-    <section id="news" class="py-20 bg-white">
+      <section id="news" class="py-20 bg-gray-50 bg-yellow-50">
         <div class="container mx-auto">
-            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">กิจกรรม</h3>
+            <h3 class="text-3xl font-bold text-gray-800 text-center mb-12">กิจกรรม</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- ข่าวสารที่ 1 -->
-                <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl overflow-hidden transition-shadow duration-300">
                     <img src="src/silpsiam_workshop1.jpg" alt="ข่าวสาร 1" class="w-full h-52 object-cover">
                     <div class="p-6">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">ปั่นจักรยานชิมอาหารมอญทำศิลปะไทย</h4>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 hover:text-yellow-600 transition-colors duration-300">
+                            ปั่นจักรยานชิมอาหารมอญทำศิลปะไทย
+                        </h4>
                         <p class="text-gray-600 mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu aliquet magna, tempor ultrices est. Proin ante est, commodo quis vulputate ac, hendrerit id metus. Praesent vel ullamcorper orci. Sed feugiat arcu nec sapien rhoncus venenatis. Aliquam sapien magna, suscipit nec congue egestas, dictum sed est. Mauris sit amet est ut ligula cursu
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu aliquet magna, tempor ultrices est.
                         </p>
-                        <a href="#" class="text-yellow-600 font-bold hover:underline">อ่านเพิ่มเติม →</a>
-
+                        <a href="#" class="text-yellow-600 font-bold hover:text-yellow-800 transition-colors duration-300">
+                            อ่านเพิ่มเติม →
+                        </a>
                     </div>
                 </div>
                 <!-- ข่าวสารที่ 2 -->
-                <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl overflow-hidden transition-shadow duration-300">
                     <img src="src/silpsiam_workshop2.jpg" alt="ข่าวสาร 2" class="w-full h-52 object-cover">
                     <div class="p-6">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">ล่องเรือชมทิวทัศน์วัฒนธรรม รศ.๑๓๒</h4>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 hover:text-yellow-600 transition-colors duration-300">
+                            ล่องเรือชมทิวทัศน์วัฒนธรรม รศ.๑๓๒
+                        </h4>
                         <p class="text-gray-600 mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu aliquet magna, tempor ultrices est. Proin ante est, commodo quis vulputate ac, hendrerit id metus. Praesent vel ullamcorper orci. Sed feugiat arcu nec sapien rhoncus venenatis. Aliquam sapien magna, suscipit nec congue egestas, dictum sed est. Mauris sit amet est ut ligula cursu
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu aliquet magna, tempor ultrices est.
                         </p>
-                        <a href="#" class="text-yellow-600 font-bold hover:underline">อ่านเพิ่มเติม →</a>
+                        <a href="#" class="text-yellow-600 font-bold hover:text-yellow-800 transition-colors duration-300">
+                            อ่านเพิ่มเติม →
+                        </a>
                     </div>
                 </div>
                 <!-- ข่าวสารที่ 3 -->
-                <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden">
-                    <img src="https://via.placeholder.com/400x250" alt="ข่าวสาร 3" class="w-full h-52 object-cover">
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl overflow-hidden transition-shadow duration-300">
+                    <img src="src/เชื่อมสัมพันธ์สถาบันหน่วยงานภาครัฐเข้าชุมชน/LINE_ALBUM_เชื่อมสัมพันธ์สถาบันหน่วยงานภาครัฐเข_241214_1.jpg" 
+                         alt="ข่าวสาร 3" class="w-full h-52 object-cover">
                     <div class="p-6">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">หัวข้อข่าวสาร 3</h4>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2 hover:text-yellow-600 transition-colors duration-300">
+                            เชื่อมสัมพันธ์สถาบันหน่วยงานภาครัฐเข้าชุมชน
+                        </h4>
                         <p class="text-gray-600 mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu aliquet magna, tempor ultrices est. Proin ante est, commodo quis vulputate ac, hendrerit id metus. Praesent vel ullamcorper orci. Sed feugiat arcu nec sapien rhoncus venenatis. Aliquam sapien magna, suscipit nec congue egestas, dictum sed est. Mauris sit amet est ut ligula cursu
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu aliquet magna, tempor ultrices est.
                         </p>
-                        <a href="#" class="text-yellow-600 font-bold hover:underline">อ่านเพิ่มเติม →</a>
+                        <a href="activity1.html" class="text-yellow-600 font-bold hover:text-yellow-800 transition-colors duration-300">
+                            อ่านเพิ่มเติม →
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <section id="products" class="py-20 bg-yellow-50">
         <div class="container mx-auto">
             <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">สินค้า</h3>
@@ -203,6 +243,7 @@
             </div>
         </div>
     </section>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@silpsiam" data-unique-id="silpsiam" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@bossserxbtw?refer=creator_embed">@silpsiam</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
      <!-- Contact Section -->
      <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto">
