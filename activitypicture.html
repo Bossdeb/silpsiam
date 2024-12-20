@@ -13,60 +13,19 @@
         .section-title {
             color: #FFC107;
         }
-        .card {
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .tooltip {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .card:hover .tooltip {
-            display: flex;
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="bg-yellow-50 text-gray-800">
 
-      <!-- Navbar -->
-      <nav class="bg-yellow-500 shadow-lg sticky top-0 z-10">
+    <!-- Navbar -->
+    <nav class="bg-yellow-500 shadow-lg sticky top-0 z-10">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <h1 class="text-3xl font-extrabold text-white">ศิลป์สยาม</h1>
             <ul class="flex items-center space-x-6 relative">
                 <li><a href="index.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">หน้าหลัก</a></li>
-           
                 <li><a href="history.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ประวัติความเป็นมา</a></li>
-
                 <li><a href="owner.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ประวัติผู้ก่อตั้ง</a></li>
-
-                <li><a href="activitypicture.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ประมวลภาพกิจกรรม</a></li>
-             
+                <li><a href="activitypicture.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ภาพกิจกรรม</a></li>
                 <li><a href="index.html#products" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ผลิตภัณฑ์</a></li>
                 <li><a href="index.html#contact" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ติดต่อเรา</a></li>
             </ul>
@@ -76,44 +35,40 @@
     <!-- Content -->
     <section id="events" class="py-20">
         <div class="container mx-auto px-4 md:px-8">
-            <h2 class="text-4xl font-bold section-title text-center mb-8">ประมวลภาพกิจกรรม</h2>
+            <h2 class="text-4xl font-bold section-title text-center mb-8">ภาพกิจกรรม</h2>
+            
+            <!-- Modal -->
+            <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+                <div class="relative max-w-4xl w-full p-4">
+                    <span id="closeModal" class="absolute top-0 right-0 text-white text-3xl cursor-pointer">&times;</span>
+                    <img id="modalImage" class="max-w-full max-h-full object-contain" src="" alt="Large Image">
+                </div>
+            </div>
+
+            <!-- Image Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/silpsiam_workshop2.jpg" alt="กิจกรรมที่ 1">
+                <div class="card hover:shadow-lg hover:scale-105" onclick="openModal('src/silpsiam_workshop2.jpg')">
+                    <img src="src/silpsiam_workshop2.jpg" alt="กิจกรรมที่ 1" class="cursor-pointer w-full h-auto object-cover">
                     <div class="tooltip">กิจกรรม</div>
                 </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/silpsiam_workshop1.jpg" alt="กิจกรรมที่ 2">
+                <div class="card hover:shadow-lg hover:scale-105" onclick="openModal('src/silpsiam_workshop1.jpg')">
+                    <img src="src/silpsiam_workshop1.jpg" alt="กิจกรรมที่ 2" class="cursor-pointer w-full h-auto object-cover">
                     <div class="tooltip">กิจกรรม 2</div>
                 </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_พาเที่ยวทำกิจกรรมศิลป์สยาม_241129_3.jpg" alt="กิจกรรมที่ 3">
+                <div class="card hover:shadow-lg hover:scale-105" onclick="openModal('src/LINE_ALBUM_พาเที่ยวทำกิจกรรมศิลป์สยาม_241129_3.jpg')">
+                    <img src="src/LINE_ALBUM_พาเที่ยวทำกิจกรรมศิลป์สยาม_241129_3.jpg" alt="กิจกรรมที่ 3" class="cursor-pointer w-full h-auto object-cover">
                     <div class="tooltip">กิจกรรม</div>
                 </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_19.jpg" alt="กิจกรรมที่ 4">
+                <div class="card hover:shadow-lg hover:scale-105" onclick="openModal('src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_19.jpg')">
+                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_19.jpg" alt="กิจกรรมที่ 4" class="cursor-pointer w-full h-auto object-cover">
                     <div class="tooltip">กิจกรรม</div>
                 </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/S__21823708_0.jpg" alt="กิจกรรมที่ 5">
+                <div class="card hover:shadow-lg hover:scale-105" onclick="openModal('src/S__21823708_0.jpg')">
+                    <img src="src/S__21823708_0.jpg" alt="กิจกรรมที่ 5" class="cursor-pointer w-full h-auto object-cover">
                     <div class="tooltip">กิจกรรม</div>
                 </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg" alt="กิจกรรมที่ 6">
-                    <div class="tooltip">กิจกรรม</div>
-                </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg" alt="กิจกรรมที่ 6">
-                    <div class="tooltip">กิจกรรม</div>
-                </div>
-                <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg" alt="กิจกรรมที่ 6">
-                    <div class="tooltip">กิจกรรม</div>
-                </div>  <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg" alt="กิจกรรมที่ 6">
-                    <div class="tooltip">กิจกรรม</div>
-                </div>  <div class="card hover:shadow-lg hover:scale-105">
-                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg" alt="กิจกรรมที่ 6">
+                <div class="card hover:shadow-lg hover:scale-105" onclick="openModal('src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg')">
+                    <img src="src/LINE_ALBUM_ศิลป์สยามศูนย์เรียนรู้วัฒนธรรมเกาะเก_241129_30.jpg" alt="กิจกรรมที่ 6" class="cursor-pointer w-full h-auto object-cover">
                     <div class="tooltip">กิจกรรม</div>
                 </div>
             </div>
@@ -126,6 +81,28 @@
             <p>&copy; 2024 ศิลป์สยาม. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Function to open the modal and display the image
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.classList.remove('hidden');
+            modalImage.src = imageSrc;
+        }
+
+        // Function to close the modal when the close button is clicked
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('imageModal').classList.add('hidden');
+        });
+
+        // Optionally close the modal when the user clicks outside the image
+        document.getElementById('imageModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+    </script>
 
 </body>
 </html>
