@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ศิลป์สยาม | Silpsiam - ศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง">
+<meta name="keywords" content="ศิลป์สยาม, Silpsiam, วัฒนธรรม, เกาะเกร็ด, วัดเสาธงทอง">
+<meta name="author" content="Silpsiam">
+
     <title>ศิลป์สยาม | Silpsiam</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -52,7 +59,7 @@
     </style>
     
 </head>
-<body class="bg-yellow-50 text-gray-800">
+<body class="bg-yellow-50 text-gray-800" >
 
     <!-- Navbar -->
     <nav class="bg-yellow-500 shadow-lg sticky top-0 z-10">
@@ -82,17 +89,39 @@
         </div>
     </nav>
     
+    <section class="relative w-full h-screen overflow-hidden bg-black">
+        <!-- Background Video -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="src/ศิลป์สยามเกาะเกร็ดการบรรจุภัณฑ์.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+        <!-- Centered Content -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 text-white">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                ศิลป์สยาม | Silpsiam
+            </h1>
+            <p class="text-lg md:text-2xl mb-6">
+                ศูนย์เรียนรู้วัฒนธรรมเกาะเกร็ดวัดเสาธงทอง
+            </p>
+            
+        </div>
+    </section>
+    
 
-    <header class="bg-yellow-50 text-white py-24 ">
-        <div class="container mx-auto text-center">
+    <header class="bg-yellow-50 text-white py-24" data-aos='fade-up'>
+        <div class="container mx-auto text-center ">
             <h2 class="text-5xl font-extrabold leading-tight mb-8 text-black">
                 <span id="typewriter" class="border-r-4 border-white"></span>
             </h2>
         
             <!-- Slideshow -->
-            <div class="relative mx-auto" style="max-width: 800px;">
+            <div class="relative mx-auto w-full" style="max-width: 1200px;">
                 <!-- Slides -->
-                <div class="overflow-hidden relative w-full rounded-lg shadow-md" style="aspect-ratio: 16/9;">
+                <div class="overflow-hidden relative w-full  shadow-md" style="aspect-ratio: 16/9;">
                     <div id="slides" class="flex transition-transform duration-500 w-full">
                         <img src="src/silpsiam_slideshow1.jpg" alt="Artwork 1" class="w-full h-auto rounded-lg">
                         <img src="src/silpsiam_slideshow2.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
@@ -102,8 +131,8 @@
         
                 <!-- Navigation Buttons -->
                 <div class="absolute inset-0 flex items-center justify-between">
-                    <button id="prev" class="text-white bg-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md">‹</button>
-                    <button id="next" class="text-white bg-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md">›</button>
+                    <button id="prev"‹</button>
+                    <button id="next"›</button>
                 </div>
         
                 <!-- Indicators -->
@@ -116,7 +145,7 @@
         </div>
     </header>
     
-    <section id="about" class="bg-yellow-50 py-8 px-4 sm:px-6 lg:px-8">
+    <section id="about" class="bg-yellow-50 py-8 px-4 sm:px-6 lg:px-8" data-aos='fade-up'>
         <div class="max-w-6xl mx-auto  rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center p-6">
             <!-- ภาพด้านซ้าย -->
             <div class="flex-shrink-0 md:w-1/3">
@@ -134,7 +163,7 @@
         </div>
     </section>
   
-      <section id="news" class="py-20 bg-gray-50 bg-yellow-50">
+      <section id="news" class="py-20 bg-gray-50 bg-yellow-50" data-aos='fade-up'>
         <div class="container mx-auto">
             <h3 class="text-3xl font-bold text-gray-800 text-center mb-12">กิจกรรม</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -188,7 +217,7 @@
         </div>
     </section>
     
-    <section id="products" class="py-20 bg-yellow-50">
+    <section id="products" class="py-20 bg-yellow-50" data-aos='fade-up'>
         <div class="container mx-auto">
             <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">สินค้า</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -243,38 +272,44 @@
             </div>
         </div>
     </section>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@silpsiam" data-unique-id="silpsiam" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@bossserxbtw?refer=creator_embed">@silpsiam</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-     <!-- Contact Section -->
-     <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto">
-            <h3 class="text-3xl font-bold text-gray-700 text-center mb-12">ติดต่อเรา</h3>
-            <div class="flex flex-col lg:flex-row items-center">
-                <!-- Contact Form -->
-                <div class="lg:w-1/2 lg:pr-8">
-                    <form action="#" method="POST" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700">ชื่อ</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700">อีเมล</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700">ข้อความ</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">ส่งข้อความ</button>
-                    </form>
-                </div>
+    <!-- <blockquote data-aos='fade-up' class="tiktok-embed" cite="https://www.tiktok.com/@silpsiam" data-unique-id="silpsiam" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@bossserxbtw?refer=creator_embed">@silpsiam</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+    Section: ติดตาม social ช่องทางต่างๆ -->
+<!-- Section: ติดตาม social ช่องทางต่างๆ -->
+<section id="contact" class="py-20 bg-yellow-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-yellow-600 mb-8">ติดตามเรา</h2>
+        <p class="text-lg text-gray-700 mb-6">
+            ติดตามข่าวสารและกิจกรรมต่างๆ ของเราได้ทางช่องทางโซเชียลมีเดียด้านล่าง
+        </p>
+        <div class="flex justify-center space-x-6">
+            <!-- Facebook -->
+            <a href="#" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.04c-5.52 0-10 4.48-10 10 0 4.99 3.66 9.12 8.44 9.88v-6.99h-2.54v-2.89h2.54v-2.2c0-2.49 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.48h-1.26c-1.24 0-1.63.77-1.63 1.56v1.85h2.78l-.44 2.89h-2.34v6.99c4.78-.76 8.44-4.89 8.44-9.88 0-5.52-4.48-10-10-10z" />
+                </svg>
+                <span class="sr-only">Facebook</span>
+            </a>
 
-                <!-- Google Maps -->
-                <div class="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.358024953994!2d100.48632151536637!3d13.847860390287453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e283fa1a52fcd5%3A0xfca9c5d7dbe47214!2z4LmA4LiB4Liy4LiZ4LiB4Lib4LiZ4Liq4Liy4LiB4LiU4LmA4LinIOC4reC4oOC5gOC4quC4nuC4o-C4tOC5jOC4l-C4sA!5e0!3m2!1sth!2sth!4v1675257600000!5m2!1sth!2sth" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
+            <!-- YouTube -->
+            <a href="#" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.6 7.59c-.2-.75-.78-1.34-1.52-1.55-1.35-.36-6.77-.36-6.77-.36s-5.42 0-6.77.36c-.74.21-1.32.8-1.52 1.55-.36 1.37-.36 4.23-.36 4.23s0 2.86.36 4.23c.2.75.78 1.34 1.52 1.55 1.35.36 6.77.36 6.77.36s5.42 0 6.77-.36c.74-.21 1.32-.8 1.52-1.55.36-1.37.36-4.23.36-4.23s0-2.86-.36-4.23zM10 14.75v-5.5l5 2.75-5 2.75z" />
+                </svg>
+                <span class="sr-only">YouTube</span>
+            </a>
+
+            <!-- TikTok -->
+            <a href="#" class="text-yellow-500 hover:text-yellow-600 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16.92 5.1c.29 1.51 1.25 2.74 2.62 3.33v1.8a5.84 5.84 0 0 1-3.5-1.15v5.82a5.54 5.54 0 1 1-3.34-5.08V8.9h2.17v-.86c0-.63-.01-1.24-.01-1.84h1.67zM9.3 15.2a2.4 2.4 0 1 0 2.4-2.4 2.4 2.4 0 0 0-2.4 2.4z" />
+                </svg>
+                <span class="sr-only">TikTok</span>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
+
+
    
     <!-- Footer -->
     <footer class="bg-yellow-500 text-white py-8">
@@ -354,6 +389,12 @@
 
     typeEffect();
 });
+
+AOS.init({
+        duration: 1200, // Animation duration in ms
+        offset: 100,    // Offset from the element
+        easing: 'ease-in-out', // Easing function
+    });
     </script>
 </body>
 </html>
