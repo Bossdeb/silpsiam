@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศิลป์สยาม | Silpsiam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: url('src/thai-pattern-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 223, 136, 0.2);
+            transition: background-color 0.3s ease-in-out;
+            border-radius: 8px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            background-color: #FFC107;
+            color: #000;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .decorative-border {
+            border: 3px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+    </style>
+</head>
+
+<body class="bg-yellow-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-yellow-500 shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-white">ศิลป์สยาม</h1>
+            <ul class="flex items-center space-x-6">
+                <li><a href="index.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">หน้าหลัก</a></li>
+                <li><a href="history.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ประวัติความเป็นมา</a></li>
+                <li><a href="owner.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ประวัติผู้ก่อตั้ง</a></li>
+                <li><a href="activitypicture.html" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ภาพกิจกรรม</a></li>
+                <li><a href="index.html#products" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ผลิตภัณฑ์</a></li>
+                <li><a href="index.html#contact" class="nav-item px-4 py-2 text-white hover:text-yellow-100">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Activity Details Section -->
+        <section class="decorative-border mb-8">
+            <h2 class="section-title">กิจกรรม: กิจกรรมเขียนหัวโขนศิลป์สยาม   </h2>
+            <p class="text-gray-700 text-lg">
+                เป็นการสร้างสรรค์และตกแต่งหัวโขนไทย โดยผู้เข้าร่วมจะได้เรียนรู้ศิลปะการเขียนลวดลายและลงสีหัวโขนแบบไทยดั้งเดิม ซึ่งสะท้อนเอกลักษณ์และวัฒนธรรมของสยาม เหมาะสำหรับการส่งเสริมงานศิลปะไทยและสร้างความภาคภูมิใจในมรดกทางวัฒนธรรม
+            </p>
+        </section>
+        <!-- Image Section -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-g">  
+                <img src="src/กิจกรรม/กิจกรรมเขียนหัวโขนศิลป์สยาม/S__22913106.jpg"
+                alt="ภาพกิจกรรม 3" class="rounded-lg shadow-md object-cover w-full h-64">
+            <img src="src/กิจกรรม/กิจกรรมเขียนหัวโขนศิลป์สยาม/S__22913107.jpg"
+                alt="ภาพกิจกรรม 3" class="rounded-lg shadow-md object-cover w-full h-64">
+                <img src="src/กิจกรรม/กิจกรรมเขียนหัวโขนศิลป์สยาม/S__22913110.jpg"
+                alt="ภาพกิจกรรม 3" class="rounded-lg shadow-md object-cover w-full h-64">
+        </section>
+    </main>
+
+</body>
+
+</html>
