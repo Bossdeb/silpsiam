@@ -62,29 +62,36 @@
 <body class="bg-yellow-50 text-red-900" >
 
     <!-- Navbar -->
-   <!-- Navbar -->
-   <nav class="bg-red-900 shadow-lg sticky top-0 z-10">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <h1 class="text-3xl font-extrabold text-amber-200">ศิลป์สยาม</h1>
-        <ul class="flex items-center space-x-6 relative">
-            <li><a href="index.html" class="nav-item px-4 py-2 text-amber-200 hover:text-yellow-100">หน้าหลัก</a></li>
-       
-            <li><a href="history.html" class="nav-item px-4 py-2 text-amber-200 hover:text-yellow-100">ประวัติความเป็นมา</a></li>
-
-            <li><a href="owner.html" class="nav-item px-4 py-2 text-amber-200 hover:text-yellow-100">ประวัติผู้ก่อตั้ง</a></li>
-
-            <li><a href="all-activities.html" class="nav-item px-4 py-2 text-amber-200 hover:text-yellow-100">กิจกรรม</a></li>
-        
-            <li><a href="index.html#products" class="nav-item px-4 py-2 text-amber-200 hover:text-yellow-100">ผลิตภัณฑ์</a></li>
-            <li><a href="index.html#contact" class="nav-item px-4 py-2 text-amber-200 hover:text-yellow-100">ติดต่อเรา</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav class="bg-red-900 shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-3xl font-extrabold text-amber-200">ศิลป์สยาม</h1>
     
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="lg:hidden text-amber-200 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+    
+            <!-- Menu Links -->
+            <ul
+                id="menu"
+                class="hidden lg:flex flex-col lg:flex-row items-center lg:space-x-6 absolute lg:relative top-full left-0 w-full lg:w-auto bg-red-900 lg:bg-transparent text-center lg:text-left"
+            >
+                <li><a href="index.html" class="block px-4 py-2 text-amber-200 hover:text-yellow-100">หน้าหลัก</a></li>
+                <li><a href="history.html" class="block px-4 py-2 text-amber-200 hover:text-yellow-100">ประวัติความเป็นมา</a></li>
+                <li><a href="owner.html" class="block px-4 py-2 text-amber-200 hover:text-yellow-100">ประวัติผู้ก่อตั้ง</a></li>
+                <li><a href="all-activities.html" class="block px-4 py-2 text-amber-200 hover:text-yellow-100">กิจกรรม</a></li>
+                <li><a href="index.html#products" class="block px-4 py-2 text-amber-200 hover:text-yellow-100">ผลิตภัณฑ์</a></li>
+                <li><a href="index.html#contact" class="block px-4 py-2 text-amber-200 hover:text-yellow-100">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </nav>
     <section class="relative w-full h-screen overflow-hidden bg-black">
         <!-- Background Video -->
         <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-            <source src="src/D.2 ลุงสุชาติ .mp4" type="video/mp4">
+            <source src="src/คลิป.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     
@@ -115,11 +122,14 @@
                 <!-- Slides -->
                 <div class="overflow-hidden relative w-full  shadow-md" style="aspect-ratio: 16/9;">
                     <div id="slides" class="flex transition-transform duration-500 w-full">
-                        <img src="src/silpsiam_slideshow1.jpg" alt="Artwork 1" class="w-full h-auto rounded-lg">
-                        <img src="src/silpsiam_slideshow2.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
-                        <img src="src/silpsiam_slideshow1.jpg" alt="Artwork 1" class="w-full h-auto rounded-lg">
-                        <img src="src/silpsiam_slideshow2.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
+                        <img src="src/1.jpg" alt="Artwork 1" class="w-full h-auto rounded-lg">
+                        <img src="src/2.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
+                        <img src="src/3.jpg" alt="Artwork 1" class="w-full h-auto rounded-lg">
+                        <img src="src/4.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
+                        <img src="src/5.jpg" alt="Artwork 2" class="w-full h-auto rounded-lg">
+
                     </div>
+
                 </div>
         
                 <!-- Navigation Buttons -->
@@ -132,7 +142,9 @@
                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                     <button class="indicator bg-red-900 w-4 h-4 rounded-full focus:outline-none"></button>
                     <button class="indicator bg-red-500 w-4 h-4 rounded-full focus:outline-none"></button>
-              
+                    <button class="indicator bg-red-900 w-4 h-4 rounded-full focus:outline-none"></button>
+                    <button class="indicator bg-red-500 w-4 h-4 rounded-full focus:outline-none"></button>
+                    <button class="indicator bg-red-500 w-4 h-4 rounded-full focus:outline-none"></button>
                 </div>
             </div>
         </div>
@@ -384,7 +396,10 @@
 
     typeEffect();
 });
-
+document.getElementById('menu-toggle').addEventListener('click', function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
 AOS.init({
         duration: 1200, // Animation duration in ms
         offset: 100,    // Offset from the element
